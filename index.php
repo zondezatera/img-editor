@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
-    <?php if (!$_SESSION['FBID']): ?>
+    <?php if ($_SESSION['FBID']): ?>
     <!--  After user login  -->
     <div class="container">
       <div class="logo-wrapper">
