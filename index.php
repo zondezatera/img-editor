@@ -17,37 +17,12 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
-    <?php if ($_SESSION['FBID']): ?>
+    <?php if (!$_SESSION['FBID']): ?>
     <!--  After user login  -->
     <div class="container">
-     <!--  <div class="hero-unit">
-        <h1>Hello <?php echo $_SESSION['USERNAME']; ?></h1>
-        <p>Welcome to "facebook login" tutorial</p>
-      </div>
-      <div class="span4">
-        <ul class="nav nav-list">
-          <li class="nav-header">Image</li>
-    	     <li>
-            <img src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture">
-          </li>
-          <li class="nav-header">Facebook ID</li>
-          <li><?php echo  $_SESSION['FBID']; ?></li>
-          <li class="nav-header">Facebook fullname</li>
-          <li><?php echo $_SESSION['FULLNAME']; ?></li>
-          <li class="nav-header">Facebook Email</li>
-          <li><?php echo $_SESSION['EMAIL']; ?></li>
-          <div>
-            <a href="logout.php">Logout</a>
-          </div>
-        </ul>
-      </div> -->
       <div class="logo-wrapper">
         <div class="page-wrapper">
-          <a href="http://www.designil.com/" title="สอนเว็บดีไซน์ HTML CSS">
-            <img src="./Jeju Editor - ทำรูปสไตล์เจ๊จูในรูปแบบของคุณเอง_files/logo-thai3.png" alt="">
-          </a>
-          <div class="head-note">
-            Jeju Editor - สร้างรูปสไตล์​เจ๊จูในรูปแบบของคุณเอง
+          <div class="title-head">
           </div>
         </div>
       </div>
@@ -94,8 +69,8 @@
         <hr>
         ความโปร่งใสรูป: <div class="slider-wrap"><em>0 (ทึบ)</em> <input type="range" min="0" max="100" value="20" id="imgopacity" step="1"> <em>100 (โปร่ง)</em></div>
         <hr>
-        <div class="button-row">
-          <a href="http://designil.com/jeju/#" id="download">ดาวน์โหลดรูป</a>
+        <div class="">
+          <a href="#" class="btn btn-primary" id="download">ดาวน์โหลดรูป</a>
           <p>ทดสอบใน Chrome, Firefox เรียบร้อยแล้ว ไม่ควรใช้ Internet Explorer</p>
         </div>
       </div>
@@ -103,10 +78,15 @@
     <?php else: ?>
     <!-- Before login --> 
     <div class="container">
-      <h1>Login with Facebook</h1> Not Connected
-      <div>
-        <!-- <a href="fbconfig.php">Login with Facebook</a> -->
-        <a href="login_fb.php">Login with Facebook</a>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <h2>Login with Facebook</h2>
+             <button class="btn btn-primary">
+              <a href="login_fb.php" style="color:white;">Login with Facebook</a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <?php endif ?>

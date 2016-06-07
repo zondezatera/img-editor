@@ -82,7 +82,6 @@ var drawJeju = debounce(function() {
   }
 
   // Get Image SRC
-  
   var uploadInput = getID('uploadinput');
   if ( uploadInput.files && uploadInput.files[0] ) {
     // Has Image Uploaded
@@ -101,11 +100,6 @@ drawJeju();
 
 // ------------------------------------------------------------------
 
-
-
-
-
-
 // - All Event Listeners (Trigger redraw when value change)
 // Detect Input Change
 var lineInputs = document.querySelectorAll('#line1, #line2, #line3');
@@ -122,7 +116,6 @@ for(var i=0; i<opInputs.length; i++) {
 // Detect Uplaod Image
 var uploadInput = getID('uploadinput');
 uploadInput.addEventListener('change', function() {
-  console.log('update');
   drawJeju();
 });
 
@@ -132,18 +125,12 @@ uploadInput.addEventListener('click', function() {
   var line1 = getID('line1').value;
   var line2 = getID('line2').value;
   var line3 = getID('line3').value;
-  ga('send', 'event', 'jeju_line12', line1 + ' / ' + line2);
-  ga('send', 'event', 'jeju_line3', line3);
   // Generate Image
   var dataURL = getID('jeju').toDataURL();
   window.open(dataURL);
 });
 
 // ------------------------------------------------------------------
-
-
-
-
 
 // Debounce function
 // Ref: https://davidwalsh.name/javascript-debounce-function

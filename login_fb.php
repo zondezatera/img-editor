@@ -14,10 +14,9 @@ use Facebook\Entities\AccessToken;
 use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
-FacebookSession::setDefaultApplication( 'Your APP ID','Your APP Secret' );
+FacebookSession::setDefaultApplication( '1566791600281081','c4b513e435f0ff465654a0b528ba8506' );
 // login helper with redirect_uri
-    // $helper = new FacebookRedirectLoginHelper('http://demos.krizna.com/1353/fbconfig.php' );
-    $helper = new FacebookRedirectLoginHelper('http://demos.krizna.com/1353/login_fb.php' );
+    $helper = new FacebookRedirectLoginHelper('https://img-editor.herokuapp.com/login_fb.php' );
 try {
   $session = $helper->getSessionFromRedirect();
 } catch( FacebookRequestException $ex ) {
