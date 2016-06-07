@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'TH Sarabun New';
+  src: url("../fonts/THSarabunNew.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/THSarabunNew.eot?#iefix") format("embedded-opentype"), url("../fonts/THSarabunNew.woff") format("woff"), url("../fonts/THSarabunNew.ttf") format("truetype"), url("../fonts/THSarabunNew.svg#4225a5f47f7da26e681adadebaaad17c") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #eee;
+  font-family: 'TH Sarabun New', sans-serif;
+  font-size: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+#jeju {
+  border: 1px solid #000;
+  max-width: 100%;
+  height: auto;
+}
+
+.head-note {
+  margin-top: 10px;
+  color: #fd4b13;
+}
+
+#upload, #download {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid #087782;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  background: #21aeb7;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#upload:hover, #download:hover {
+  background: #087782;
+  color: #fff;
+}
+
+#uploadinput {
+  display: none;
+}
+
+#download {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.canvas-wrapper {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  margin: 15px auto 0;
+}
+
+.page-wrapper {
+  max-width: 90%;
+  width: 960px;
+  margin: auto;
+}
+
+.page-wrapper input[type="text"] {
+  padding: 2px 5px;
+  font-size: 25px;
+  font-family: 'TH Sarabun New';
+  margin-bottom: 10px;
+  width: 600px;
+  max-width: 100%;
+}
+
+.credit-note {
+  font-size: 20px;
+  text-align: center;
+}
+
+.credit-note a {
+  color: #087782;
+}
+
+.button-row {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.logo-wrapper {
+  background: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.changelog {
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+.changelog pre {
+  background: #ddd;
+  padding: 10px;
+}
+
+.slider-wrap input {
+  width: 250px;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.col-left {
+  width: 48%;
+  float: left;
+}
+
+.col-right {
+  width: 48%;
+  float: right;
+}
+
+.mobile-note {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .mobile-note {
+    display: block;
+  }
+}
