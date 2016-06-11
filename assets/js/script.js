@@ -26,16 +26,16 @@ var drawJeju = debounce(function() {
     ctx.drawImage(bgImg, 0, 0, 1024 * bgWRatio, 1024 * bgHRatio);
 
     // Step - Turn image to black/white
-    var bgData = ctx.getImageData(0, 0, 1024, 1024);
-    var bgPixel = bgData.data;
-    for (var i = 0, n = bgPixel.length; i < n; i += 4) {
-      var grayscale = bgPixel[i] * .3 + bgPixel[i+1] * .59 + bgPixel[i+2] * .11;
-      bgPixel[i] = grayscale; 	// red
-      bgPixel[i+1] = grayscale; 	// green
-      bgPixel[i+2] = grayscale; 	// blue
-      // alpha
-    }
-    ctx.putImageData(bgData, 0, 0);
+    // var bgData = ctx.getImageData(0, 0, 1024, 1024);
+    // var bgPixel = bgData.data;
+    // for (var i = 0, n = bgPixel.length; i < n; i += 4) {
+    //   var grayscale = bgPixel[i] * .3 + bgPixel[i+1] * .59 + bgPixel[i+2] * .11;
+    //   bgPixel[i] = grayscale; 	// red
+    //   bgPixel[i+1] = grayscale; 	// green
+    //   bgPixel[i+2] = grayscale; 	// blue
+    //   // alpha
+    // }
+    // ctx.putImageData(bgData, 0, 0);
     
     // Get Text / Value
     var line1 = getID('line1').value;
@@ -78,7 +78,7 @@ var drawJeju = debounce(function() {
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
     ctx.textBaseline = "bottom";
-    ctx.fillText("สร้างรูปของคุณเองได้ที่ http://www.designil.com/jeju", canvas.width/2, canvas.height-30);
+    ctx.fillText("www.wwf.or.th", canvas.width/2, canvas.height-30);
   }
 
   // Get Image SRC
@@ -92,7 +92,13 @@ var drawJeju = debounce(function() {
     fileReader.readAsDataURL( uploadInput.files[0] );
   } else {
     // No Image Uploaded
-    bgImg.src = 'http://i.imgur.com/igNeJQw.jpg';
+    var fbid = getID('fbid').value;
+    if (fbid) {
+       var img_fb = getID('img_fb').value;
+      bgImg.src = img_fb;
+    }else{
+      bgImg.src = 'http://i.imgur.com/GKuSXZf.png';
+    }
   }
 }, 10); // End DrawJeju (Debounced)
 

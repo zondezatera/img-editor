@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'TH Sarabun New';
-  src: url("../fonts/THSarabunNew.eot");
+  src: url("../fonts/thsarabunnew-webfont.eot");
   /* IE9 Compat Modes */
-  src: url("../fonts/THSarabunNew.eot?#iefix") format("embedded-opentype"), url("../fonts/THSarabunNew.woff") format("woff"), url("../fonts/THSarabunNew.ttf") format("truetype"), url("../fonts/THSarabunNew.svg#4225a5f47f7da26e681adadebaaad17c") format("svg");
+  src: url("../fonts/thsarabunnew-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/thsarabunnew-webfont.woff") format("woff"), url("../fonts/thsarabunnew-webfont.ttf") format("truetype"), url("../fonts/thsarabunnew-webfont.svg#4225a5f47f7da26e681adadebaaad17c") format("svg");
   /* Legacy iOS */
   font-style: normal;
   font-weight: 400;

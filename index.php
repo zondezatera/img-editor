@@ -17,16 +17,12 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
+  <?php 
+  echo "<pre>";print_r($_SESSION);echo "</pre>";
+  ?>
     <?php if ($_SESSION['FBID']): ?>
     <!--  After user login  -->
     <div class="container">
-      <div class="logo-wrapper">
-        <div class="page-wrapper">
-          <div class="title-head">
-          </div>
-        </div>
-      </div>
-
       <div class="page-wrapper">
         <div class="canvas-wrapper">
           <div class="mobile-note">
@@ -44,7 +40,7 @@
         </div>
         <div class="row">
           <div class="col-left">
-            บรรทัดที่ 1: <input type="text" id="line1" value="Hi เป็นประโยคบอกทัก">
+            บรรทัดที่ 1: <input type="text" id="line1" value="Test L2">
           </div>
           <div class="col-right">
             ขนาดตัวหนังสือ 1: <div class="slider-wrap"><em>10px</em> <input type="range" min="10" max="200" value="122" id="font1" step="1"> <em>200px</em></div>
@@ -52,7 +48,7 @@
         </div>
         <div class="row">
           <div class="col-left">
-            บรรทัดที่ 2: <input type="text" id="line2" value="แต่ รัก เป็นประโยคบอกเธอ">
+            บรรทัดที่ 2: <input type="text" id="line2" value="Test L2">
           </div>
           <div class="col-right">
             ขนาดตัวหนังสือ 2: <div class="slider-wrap"><em>10px</em> <input type="range" min="10" max="200" value="122" id="font2" step="1"> <em>200px</em></div>
@@ -60,7 +56,7 @@
         </div>
         <div class="row">
           <div class="col-left">
-            บรรทัดที่ 3: <input type="text" id="line3" value="(เจ้แทน รับปรึกษาปัญหาหัวใจ 08X XXX XXXX)">
+            บรรทัดที่ 3: <input type="text" id="line3" value="TEST L3">
           </div>
           <div class="col-right">
             ขนาดตัวหนังสือ 3: <div class="slider-wrap"><em>10px</em> <input type="range" min="10" max="200" value="70" id="font3" step="1"> <em>200px</em></div>
@@ -73,8 +69,15 @@
           <a href="#" class="btn btn-primary" id="download">ดาวน์โหลดรูป</a>
           <p>ทดสอบใน Chrome, Firefox เรียบร้อยแล้ว ไม่ควรใช้ Internet Explorer</p>
         </div>
+        <?php if ($_SESSION['FBID']){ ?>
+        <input type="hidden" name="fbid" id="fbid" value="true">
+        <input type="hidden" name="img_fb" id="img_fb" value="https://graph.facebook.com/<?php echo $_SESSION['FBID'];?>/picture?height=1024&width=1024">
+        <?php }else{ ?>
+           <input type="hidden" name="fbid" id="fbid" value="false">
+        <?php } ?>
       </div>
     </div>
+    <div><a href="logout.php">logout</a></div>
     <?php else: ?>
     <!-- Before login --> 
     <div class="container">
